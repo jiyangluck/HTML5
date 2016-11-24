@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.big-box{
+			width:500px;
+			height:300px;
+			border:1px solid red;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin-left:100px;
+			margin-top:100px;
+			float: left;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			margin-left:100px;
+			margin-top:100px;
+			float: left;
+		}
+		.big-box:hover .box1{
+			transform: translateY(50px);
+		}
+		.big-box:hover .box2{
+			transform: translateY(-50px);
+		}
+	</style>
+</head>
+<body>
+	<div class="big-box">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

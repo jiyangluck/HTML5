@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			box-sizing: border-box;
+		}
+		.clearFix:before,.clearFix:after{
+			display: block;
+			content:"";
+			clear:both;
+		}
+		.tab>li{
+			width:80px;
+			height:30px;
+			border:1px solid blue;
+			text-align: center;
+			line-height: 30px;
+			float: left;
+		}
+		.container .box{
+			width:240px;
+			height:200px;
+			border:1px solid red;
+			display: none;
+		}
+		.box:first-of-type{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul class="tab">
+		<li><a href="#box1">html</a></li>
+		<li><a href="#box2">css</a></li>
+		<li><a href="#box3">javascript</a></li>
+	</ul>
+	<div class="container clearFix">
+		<div id="box1" class="box">
+			<h3>超文本标记语言</h1>
+			<p>网页的解构和内容用html标签标示</p>
+		</div>
+		<div id="box2" class="box">
+			<h3>层叠样式表</h3>
+			<p>控制网页的样式</p>
+		</div>
+		<div id="box3" class="box">
+			<h3>最火的编程语言</h3>
+			<p>弱类型编程语言</p>
+		</div>
+	</div>
+</body>
+</html>

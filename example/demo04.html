@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			list-style: none;
+		}
+		.item{
+			background-color: blue;
+			color:#fff;
+			height:0px;
+			transition:height 0.5s;
+		}
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.nav>li{
+			list-style: none;
+			float: left;
+			height:30px;
+			width: 80px;
+			border:1px solid red;
+			text-align: center;
+			line-height: 30px;
+		}
+		.nav>li:hover .item{
+			height:90px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<a href="">服装</a>
+			<ul class="item">
+				<li>男装</li>
+				<li>女装</li>
+				<li>童装</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">服装</a>
+			<ul class="item">
+				<li>男装</li>
+				<li>女装</li>
+				<li>童装</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">服装</a>
+			<ul class="item">
+				<li>男装</li>
+				<li>女装</li>
+				<li>童装</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
