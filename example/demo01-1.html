@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.radio-box{
+			position: relative;
+	
+		}
+		.myradio{
+			display: none;
+		}
+		.myradio + label:before{
+			content:"";
+			border:1px solid red;
+			display: inline-block;
+			width:16px;
+			height:16px;
+			border-radius:50%;
+			margin-right:5px;
+		}
+
+		.myradio:checked + label:after{
+			content:"";
+			width:10px;
+			height:10px;
+			background-color: blue;
+			border-radius:50%;
+			display: inline-block;
+			position: absolute;
+			left:4px;
+			top:4px;
+		}
+	</style>
+</head>
+<body>
+	<h3>radio默认样式</h3>
+	<form action="">
+		<div class="radio-box">
+			<input id="male" type="radio" name="sex">
+			<label for="male">男</label>
+		</div>
+		<div class="radio-box">
+			<input id="female" type="radio" name="sex">
+			<label for="female">女</label>
+		</div>
+	</form>
+
+	<h3>radio自定义样式</h3>
+	<form action="">
+		<div class="radio-box">
+			<input class="myradio" id="nan" type="radio" name="sex">
+			<label for="nan">男</label>
+		</div>
+		<div class="radio-box">
+			<input class="myradio" id="nv" type="radio" name="sex">
+			<label for="nv">女</label>
+		</div>
+	</form>
+</body>
+</html>

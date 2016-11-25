@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.clear:before,.clear:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+
+		.box li{
+			width:100px;
+			height: 100px;
+			background-color: red;
+			margin-left:10px;
+			float: left;
+			list-style: none;
+		}
+
+		h3{
+			border:1px solid blue;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="box">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="container clear">
+		<h3>上面有三个li标签</h3>
+	</div>
+</body>
+</html>
