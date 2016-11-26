@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		@keyframes diskrun{
+			from{
+				transform:rotate(0deg);
+			}
+			to{
+				transform:rotate(360deg);
+			}
+		}
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: #f00;
+			margin:100px auto;
+			animation:diskrun 5s linear infinite;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<audio id="music" src="../media/media.mp3" autoplay></audio>
+	<script src="../script/jquery.js"></script>
+	<script>
+		//原生写法
+		// var oMusic = document.querySelector("#music");
+		// var oBox = document.querySelector(".box");
+		// oBox.onclick = function(){
+		// 	var paused = this.style.animationPlayState;
+		// 	if(!paused){
+		// 		this.style.animationPlayState = "paused";
+		// 		oMusic.pause();
+		// 	}else{
+		// 		this.style.animationPlayState = "";
+		// 		oMusic.pause()
+		// 		oMusic.play();;
+		// 	}
+		// }
+
+		//jquery写法
+		var $music = $("#music");
+		$(".box").click(function(){
+			var state = $music[0].paused;
+			if(state){
+				$music[0].play();
+			}else{
+				$music[0].pause();
+			}
+			$(this).css("animation-play-state",state?"running":"paused")
+		})
+	</script>
+</body>
+</html>
