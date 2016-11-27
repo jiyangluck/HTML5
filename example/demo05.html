@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo03-07:百度新闻右下菜单效果制作</title>
+	<link rel="stylesheet" href="../style/bootstrap.min.css">
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#nav{
+			position: fixed;
+			right:100px;
+			bottom:100px;
+		}
+		#nav li{
+			background-color: #c5cae9;
+			width:50px;
+			height:50px;
+			list-style: none;
+			margin-top:5px;
+			border-radius: 5px;
+			position: relative;
+			overflow: hidden;
+		}
+		#nav li span{
+			display: block;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+		}
+		#nav li a{
+			display: block;
+			left:0px;
+			top:0px;
+			position: absolute;
+			background-color: #303f9f;
+			z-index: 999;
+			width:50px;
+			height:50px;
+			transform:rotate(90deg);
+			transform-origin:left bottom;
+			color:#fff;
+			transition:transform 2s linear .1s;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 5px;
+
+		}
+		#nav li:hover a{
+			transform:rotate(0deg);
+		}
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<li>
+			<span class="glyphicon glyphicon-apple">微</span>
+			<a>微信</a>
+		</li>
+		<li>
+			<span class="glyphicon glyphicon-king">Q</span>
+			<a>QQ</a>
+		</li>
+		<li>
+			<span class="glyphicon glyphicon-scissors">置</span>
+			<a>置顶</a>
+		</li>
+	</ul>
+</body>
+</html>
